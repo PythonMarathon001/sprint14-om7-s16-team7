@@ -55,27 +55,27 @@ import pytz
 # order3 = Order(id=103, user=user, book=book3, end_at=TEST_DATE_END, plated_end_at=TEST_DATE)
 # order3.save()
 
-author1 = Author(id=101, name="author1", surname="s1", patronymic="p1")
-author1.save()
+# author1 = Author(id=101, name="author1", surname="s1", patronymic="p1")
+# author1.save()
 
-author2 = Author(id=102, name="author2", surname="s2", patronymic="p2")
-author2.save()
+# author2 = Author(id=102, name="author2", surname="s2", patronymic="p2")
+# author2.save()
 
-book1 = Book(id=101, name="book1", description="description1", count=1)
-book1.save()
-book1.authors.add(author1)
-book1.save()
+# book1 = Book(id=101, name="book1", description="description1", count=1)
+# book1.save()
+# book1.authors.add(author1)
+# book1.save()
 
-book2 = Book(id=102, name="book2", description="description2")
-book2.save()
-book2.authors.add(author2)
-book2.save()
+# book2 = Book(id=102, name="book2", description="description2")
+# book2.save()
+# book2.authors.add(author2)
+# book2.save()
 
-book3 = Book(id=103, name="book3", description="description3")
-book3.save()
-book3.authors.add(author1)
-book3.authors.add(author2)
-book3.save()
+# book3 = Book(id=103, name="book3", description="description3")
+# book3.save()
+# book3.authors.add(author1)
+# book3.authors.add(author2)
+# book3.save()
 
 
 # Create your views here.
