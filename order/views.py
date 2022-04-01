@@ -1,4 +1,5 @@
 import datetime
+from multiprocessing import context
 from django.shortcuts import render
 from .models import Book
 
@@ -18,3 +19,10 @@ def not_returned_books(request):
     context = {'not_returned_books': user_info}
     return render(request, 'order/not_returned_books.html', context)
 
+def given_book(request, pk):
+    given_book = list(Order.objects.all().filter(user=pk))
+    context = {"given_book": given_book,
+               "title": f"User id: {pk}",
+               "id": f"{pk}"
+               }
+    return render(request, 'order/given_book.html', context)
