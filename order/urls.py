@@ -6,6 +6,6 @@ from order import views
 urlpatterns = [
     path('', views.order_list, name='order_list'),
     path('not_returned/', views.not_returned_books, name='not_returned_books'),
-    path('given_book/<int:pk>/', views.given_book, name='given_book'),
+    path('customuser_id/<int:pk>/', views.given_book, name='given_book'),
     
 ]
