@@ -1,0 +1,12 @@
+{% extends 'index.html' %}
+{% block content %}
+<h2>show all books given by specific user (by id: {{ id }} </h2>
+
+<br>
+    {% for book in given_book2 %}
+
+        <h5>{{book}}</h5>
+
+    {% endfor %}
+
+{% endblock %}

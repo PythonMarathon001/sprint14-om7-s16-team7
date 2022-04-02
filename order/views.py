@@ -20,7 +20,7 @@ def not_returned_books(request):
     return render(request, 'order/not_returned_books.html', context)
 
 def given_book(request, pk):
-    given_book = list(Order.objects.all().filter(customuser_id=pk))
+    given_book = list(Order.objects.all().filter(user__id=pk))
     user = CustomUser.objects.filter(pk=pk)[0]
     context = {"given_book": given_book,
                "title": f"User id: {pk}",
@@ -28,3 +28,10 @@ def given_book(request, pk):
                "user" : user,
                }
     return render(request, 'order/given_book.html', context)
+
+def given_book2(request, pk):
+    given_book2 = list(Order.objects.all().filter(book__id = pk))
+    context = {"given_book2": given_book2,
+                "id": f"{pk}",
+               }
+    return render(request, 'order/given_book2.html', context)

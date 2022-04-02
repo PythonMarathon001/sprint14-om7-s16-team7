@@ -19,8 +19,8 @@
     <li><a href="{% url 'unordered' %}">show information about all unordered book</a></li>
     <li>show information about book filtering by different criteria (by author, by part of name, etc.)</li>
     <li>show all books given by specific user (by id
-        {% for id in users %}
-            <a href="/order/customuser/{{ id }}">&nbsp;{{ id }}&nbsp;</a>
+        {% for id in user_id %}
+            <a href="/order/user_id/{{ id }}">&nbsp;{{ id }}&nbsp;</a>
         {% endfor %})
     </li>
 
